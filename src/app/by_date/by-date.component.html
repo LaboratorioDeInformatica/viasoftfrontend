@@ -1,0 +1,20 @@
+<table class="states">
+	<tr>
+		<th><span>Estado</span></th>
+        <th><span>Status</span></th>
+        <th><span>Data</span></th>
+	</tr>
+	<ng-container *ngFor="let s of nfeStatus; let i=index">
+		<tr>
+			<th>
+                {{s.state  }}
+            </th>
+			<th>
+                {{s.status}}
+			<th>
+            <th>
+                {{s.momentColected}}
+            </th>
+		</tr>
+	</ng-container>
+</table>
