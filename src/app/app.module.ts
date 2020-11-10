@@ -4,9 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { UnavaliableComponent } from './unavaliable/unavaliable.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, 
+    UnavaliableComponent
   ],
   imports: [
     BrowserModule,
