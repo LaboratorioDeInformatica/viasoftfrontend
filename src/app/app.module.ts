@@ -9,7 +9,12 @@ import { UnavaliableComponent } from './unavaliable/unavaliable.component';
 import { StateListCompoenent } from './state_list/state-list.component';
 import { ByStateComponent } from './by_state/by-state.component';
 import { ByDateComponent } from './by_date/by-date.component';
-
+import { ButtonModule } from 'primeng/button';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {TableModule} from 'primeng/table';
+import { FormsModule } from '@angular/forms';
+import {CardModule} from 'primeng/card';
+import {DropdownModule} from 'primeng/dropdown';
 
 
 @NgModule({
@@ -18,12 +23,20 @@ import { ByDateComponent } from './by_date/by-date.component';
     UnavaliableComponent,
     StateListCompoenent,
     ByStateComponent,
-    ByDateComponent
+    ByDateComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ButtonModule,
+    BrowserAnimationsModule,
+    TableModule,
+    FormsModule,
+    CardModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

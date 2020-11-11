@@ -1,2 +1,5 @@
-Estado {{nfeStatus.state}}
-Status Atual {{nfeStatus.status}}
+<p-card header="STATUS POR ESTADO" [style]="{'width': '40rem', 'margin-bottom': '2em'}">
+    <p-dropdown [options]="cities" click="teste()" [(ngModel)]="selectedCity1" placeholder="Select a City" optionLabel="name" [showClear]="true"></p-dropdown>
+Estado {{status?.state}}
+Status Atual {{status?.status}}
+</p-card>

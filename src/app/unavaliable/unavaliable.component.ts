@@ -12,11 +12,11 @@ import { UnavaliableService } from './unavaliable.service';
 })
 export class UnavaliableComponent{
 
-    @Input() nfeStatus : Unavaliable;
+    @Input() status : Unavaliable;
 
     constructor(unavaliableService: UnavaliableService){
-         unavaliableService.unavaliableMax().subscribe(nfeStatus => {
-            this.nfeStatus = nfeStatus;
+         unavaliableService.unavaliableMax().subscribe(status => {
+            this.status = status;
             
         });
     }
