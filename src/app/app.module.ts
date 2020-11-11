@@ -15,6 +15,8 @@ import {TableModule} from 'primeng/table';
 import { FormsModule } from '@angular/forms';
 import {CardModule} from 'primeng/card';
 import {DropdownModule} from 'primeng/dropdown';
+import {CalendarModule} from 'primeng/calendar';
+import { DatePipe } from '@angular/common'
 
 
 @NgModule({
@@ -36,9 +38,10 @@ import {DropdownModule} from 'primeng/dropdown';
     TableModule,
     FormsModule,
     CardModule,
-    DropdownModule
+    DropdownModule,
+    CalendarModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

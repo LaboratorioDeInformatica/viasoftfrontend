@@ -1,5 +1,18 @@
 <p-card header="STATUS POR ESTADO" [style]="{'width': '40rem', 'margin-bottom': '2em'}">
-    <p-dropdown [options]="cities" click="teste()" [(ngModel)]="selectedCity1" placeholder="Select a City" optionLabel="name" [showClear]="true"></p-dropdown>
-Estado {{status?.state}}
-Status Atual {{status?.status}}
+    <p-dropdown [options]="cities" click="teste()"
+     [(ngModel)]="selectedCity1" 
+     placeholder="Selecionar cidade" 
+     optionLabel="name" [showClear]="true"
+     (onChange)="onChangeCity($event)"></p-dropdown>
+
+     <div *ngIf="status; else unselected">
+        
+        Status Atual de {{status?.state}} é {{status?.status}}
+      </div>
+      
+      <ng-template #unselected>
+        Selecione um estado
+      </ng-template>
+     
+
 </p-card>

@@ -24,7 +24,7 @@ export class ByStateComponent{
 
     item: string;
 
-    constructor(byStateService: ByStateService){
+    constructor(private byStateService: ByStateService){
 
         this.items = [];
         for (let i = 0; i < 10000; i++) {
@@ -32,17 +32,24 @@ export class ByStateComponent{
         }
 
         this.cities = [
-            {name: 'New York', code: 'NY'},
-            {name: 'Rome', code: 'RM'},
-            {name: 'London', code: 'LDN'},
-            {name: 'Istanbul', code: 'IST'},
-            {name: 'Paris', code: 'PRS'}
+            {name: 'Amazonas', code: 'AM'},
+            {name: 'Bahia', code: 'BA'},
+            {name: 'Ceara', code: 'CE'},
+            {name: 'Goias', code: 'GO'},
+            {name: 'Mato Grosso', code: 'MT'},
+            {name: 'Minas Gerais', code: 'MG'},
+            {name: 'Pernanbuco', code: 'PE'},
+            {name: 'Parana', code: 'PR'},
+            {name: 'Rio Grande do SUl', code: 'RS'},
+            {name: 'Sao Paulo', code: 'SP'}
         ];
-        byStateService.statusByState('BA').subscribe(status => {this.status = status});
+        
     }
 
-    teste(){
-        console.log("cliquie")
+    onChangeCity(event){
+        let changedValue = event.value;
+        console.log(changedValue.code)
+        this.byStateService.statusByState(changedValue.code).subscribe(status => {this.status = status});
     }
 
 }

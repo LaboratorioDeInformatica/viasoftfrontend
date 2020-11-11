@@ -1,5 +1,13 @@
 <p-card header=" STATUS  DE SERVIÇO POR DATA" [style]="{'width': '40rem', 'margin-bottom': '2em'}">
-	<p-table [value]="nfeStatus">
+
+	
+
+	 <div class="p-field p-col-12 p-md-4">
+        <label for="basic">Basic</label>
+        <p-calendar inputId="basic" [(ngModel)]="date1" (onSelect)="selectDate()"></p-calendar>
+    </div>
+
+	<p-table [value]="nfeStatus" [scrollable]="true" scrollHeight="25%" scrollWidth="100%">
 		<ng-template pTemplate="header">
 			<tr>
 				<th>State</th>
