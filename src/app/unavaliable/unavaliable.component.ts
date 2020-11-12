@@ -9,7 +9,7 @@ import { UnavaliableService } from './unavaliable.service';
 })
 export class UnavaliableComponent{
 
-    @Input() status : Unavaliable;
+     status : Unavaliable;
 
     constructor(unavaliableService: UnavaliableService){
          unavaliableService.unavaliableMax().subscribe(status => {
