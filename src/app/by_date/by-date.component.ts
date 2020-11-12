@@ -8,7 +8,6 @@ import { DatePipe } from '@angular/common'
     templateUrl:'by-date.component.html'
 })
 export class ByDateComponent{
-    value: Date;
     date1: Date;
 
     lastInputDate: Date;
@@ -16,17 +15,14 @@ export class ByDateComponent{
     @Input() nfeStatus : NfeStatus[];
 
     constructor(private byDateService: ByDateService,
-        private datepipe: DatePipe){
-       
-        
+        private datepipe: DatePipe){  
     }
 
 
-    selectDate() {
-        let select_date = this.datepipe.transform(this.date1, 'yyyy-MM-dd');
-        console.log(select_date);
-        this.byDateService.statusByDate(select_date).subscribe(nfeStatus => {this.nfeStatus = nfeStatus});
-        
-        }
+selectDate() {
+    let select_date = this.datepipe.transform(this.date1, 'yyyy-MM-dd');
+    this.byDateService.statusByDate(select_date).subscribe(nfeStatus => {this.nfeStatus = nfeStatus});
+    
+    }
 
 }

@@ -1,26 +1,28 @@
 <p-card header=" STATUS  DE SERVIÇO POR DATA" [style]="{'width': '40rem', 'margin-bottom': '2em'}">
-
-	
-
+	<h5>Selecione uma Data</h5>  
 	 <div class="p-field p-col-12 p-md-4">
-        <label for="basic">Basic</label>
         <p-calendar inputId="basic" [(ngModel)]="date1" (onSelect)="selectDate()"></p-calendar>
-    </div>
-
-	<p-table [value]="nfeStatus" [scrollable]="true" scrollHeight="25%" scrollWidth="100%">
-		<ng-template pTemplate="header">
-			<tr>
-				<th>State</th>
-				<th>Status</th>
-				<th>Data</th>
-			</tr>
-		</ng-template>
-		<ng-template pTemplate="body" let-s>
-			<tr>
-				<td>{{s.state}}</td>
-				<td>{{s.status}}</td>
-				<td>{{s.momentColected}}</td>
-			</tr>
-		</ng-template>
-	</p-table>
+	</div>
+	
+	<div *ngIf="nfeStatus;" style=" margin-top: 15px;">
+        
+		<p-table [value]="nfeStatus">
+			<ng-template pTemplate="header">
+				<tr>
+					<th>Estado</th>
+					<th>Disponibilidade</th>
+					<th>Data</th>
+				</tr>
+			</ng-template>
+			<ng-template pTemplate="body" let-s>
+				<tr>
+					<td>{{s.state}}</td>
+					<td>{{s.status}}</td>
+					<td>{{s.momentColected}}</td>
+				</tr>
+			</ng-template>
+		</p-table>
+      </div>
 </p-card>
+
+

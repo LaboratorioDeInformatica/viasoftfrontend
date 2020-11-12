@@ -13,7 +13,6 @@ export class StateListCompoenent{
     constructor(stateListService: StateListService){
         stateListService.listStateServiceStatus().subscribe(nfeStatus => {
             this.nfeStatus = nfeStatus;
-            
         });
     }
 

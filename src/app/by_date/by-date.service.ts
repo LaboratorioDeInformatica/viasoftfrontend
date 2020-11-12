@@ -14,7 +14,7 @@ export class ByDateService{
     }
 
     statusByDate(data:string): Observable<NfeStatus[]>{
-       return this.http.get<NfeStatus[]>(API_URL+'/api/status/date?momentColected='+data);
+       return this.http.get<NfeStatus[]>(API_URL+'/api/status/date?filterDate='+data);
     }
 
 }

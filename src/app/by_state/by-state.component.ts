@@ -48,7 +48,6 @@ export class ByStateComponent{
 
     onChangeCity(event){
         let changedValue = event.value;
-        console.log(changedValue.code)
         this.byStateService.statusByState(changedValue.code).subscribe(status => {this.status = status});
     }
 
