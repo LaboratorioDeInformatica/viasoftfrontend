@@ -10,7 +10,7 @@ import { DatePipe } from '@angular/common'
 export class ByDateComponent{
     date: Date;
 
-    @Input() nfeStatus : NfeStatus[];
+    nfeStatus : NfeStatus[];
 
     constructor(private byDateService: ByDateService,
         private datepipe: DatePipe){  
