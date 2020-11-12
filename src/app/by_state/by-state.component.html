@@ -1,8 +1,8 @@
-<p-card header="STATUS POR ESTADO" [style]="{'width': '40rem', 'margin-bottom': '2em'}">
-  <h5>Selecione um estado</h5>  
+<p-card header="STATUS POR ESTADO" >
+ 
   <p-dropdown [options]="cities" click="teste()"
      [(ngModel)]="selectedCity1" 
-     placeholder="Selecionar cidade" 
+     placeholder="Selecionar Estado" 
      optionLabel="name" [showClear]="true"
      (onChange)="onChangeCity($event)"></p-dropdown>
 
