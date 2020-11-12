@@ -1,7 +1,7 @@
 <p-card header=" STATUS  DE SERVIÇO POR DATA" >
 	<h5>Selecione uma Data</h5>  
 	 <div class="p-field p-col-12 p-md-4">
-        <p-calendar inputId="basic" [(ngModel)]="date1" (onSelect)="selectDate()"></p-calendar>
+        <p-calendar inputId="basic" [(ngModel)]="date" (onSelect)="selectDate()"></p-calendar>
 	</div>
 	
 	<div *ngIf="nfeStatus;" style=" margin-top: 15px;">

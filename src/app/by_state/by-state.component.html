@@ -1,7 +1,7 @@
 <p-card header="STATUS POR ESTADO" >
  
   <p-dropdown [options]="cities" click="teste()"
-     [(ngModel)]="selectedCity1" 
+     [(ngModel)]="selectedCity" 
      placeholder="Selecionar Estado" 
      optionLabel="name" [showClear]="true"
      (onChange)="onChangeCity($event)"></p-dropdown>

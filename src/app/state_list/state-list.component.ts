@@ -8,7 +8,7 @@ import { StateListService } from './state-list.service';
 })
 export class StateListCompoenent{
 
-    @Input() nfeStatus : NfeStatus[];
+    nfeStatus : NfeStatus[];
 
     constructor(stateListService: StateListService){
         stateListService.listStateServiceStatus().subscribe(nfeStatus => {

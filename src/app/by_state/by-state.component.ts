@@ -16,20 +16,15 @@ export class ByStateComponent{
 
     cities: City[];
 
-    @Input() status : NfeStatus;
+    status : NfeStatus;
 
-    selectedCity1: City;
+    selectedCity: City;
 
-    items: SelectItem[];
-
-    item: string;
+    
 
     constructor(private byStateService: ByStateService){
 
-        this.items = [];
-        for (let i = 0; i < 10000; i++) {
-            this.items.push({label: 'Item ' + i, value: 'Item ' + i});
-        }
+        
 
         this.cities = [
             {name: 'Amazonas', code: 'AM'},
